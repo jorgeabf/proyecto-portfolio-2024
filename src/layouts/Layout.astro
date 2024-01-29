@@ -1,6 +1,6 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/urbanist';
+import '@fontsource-variable/urbanist'
 import Wrapper from '../components/Wrapper.astro'
 import Header from '../components/Header.astro'
 
@@ -34,21 +34,26 @@ const { title } = Astro.props
     />
     <title>{title}</title>
   </head>
-  <body>
+  <body class='relative h-full w-full bg-slate-950'>
+    <div
+      class='absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]'
+    >
+    </div>
     <Wrapper>
       <Header />
-      <slot />
+      <main class='max-w-2xl mx-auto'>
+        <slot />
+      </main>
     </Wrapper>
   </body>
 </html>
 
 <style is:global>
-	:root{
-		color-scheme: light dark;
-	}
+  :root {
+    color-scheme: light dark;
+  }
   html {
-    font-family:
-	'Urbanist Variable',serif;
+    font-family: 'Urbanist Variable', serif;
     font-size: 16px;
     line-height: 1.5;
   }

@@ -1,0 +1,76 @@
+---
+interface Props {
+  href?: string
+  class?: string
+  theme?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info'
+  size?: 'sm' | 'md' | 'lg'
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+  linkButton?: boolean
+}
+
+const {
+  href,
+  linkButton = false,
+  type = 'button',
+  theme = 'primary',
+  size = 'md',
+  class: className,
+  ...rest
+} = Astro.props
+
+const colors = {
+  primary:
+    'bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline-indigo-600',
+  secondary:
+    'bg-gray-100 text-gray-800 hover:bg-gray-200 focus-visible:outline-gray-500',
+  success:
+    'bg-green-600 text-white hover:bg-green-500 focus-visible:outline-green-500',
+  danger:
+    'bg-red-600 text-white hover:bg-red-500 focus-visible:outline-red-500',
+  warning:
+    'bg-yellow-500 text-white hover:bg-yellow-400 focus-visible:outline-yellow-400',
+  info: 'bg-blue-600 text-white hover:bg-blue-500 focus-visible:outline-blue-500'
+}
+
+const classes =
+  'inline-flex items-center gap-x-1.5 rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
+
+const sizes = {
+  sm: 'text-sm px-2.5 py-1.5',
+  md: 'text-base px-3 py-2',
+  lg: 'text-lg px-4 py-2'
+}
+---
+
+{
+  linkButton ? (
+    <a
+      href={href}
+      class:list={[
+        classes,
+        className,
+        { [colors[theme]]: theme },
+        { [sizes[size]]: size },
+        { 'opacity-50 cursor-not-allowed': rest.disabled }
+      ]}
+      {...rest}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      type={type}
+      class:list={[
+        classes,
+        className,
+        { [colors[theme]]: theme },
+        { [sizes[size]]: size },
+        { 'opacity-50 cursor-not-allowed': rest.disabled }
+      ]}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}
