@@ -10,11 +10,12 @@ interface Props {
     | 'indigo'
     | 'purple'
     | 'pink'
+    | string
 }
 
 const { color = 'gray', class: className, ...rest } = Astro.props
 
-const colors = {
+const colors: { [key: string]: string } = {
   red: 'bg-red-50 text-red-700 ring-red-600/10',
   green: 'bg-green-50 text-green-700 ring-green-600/20',
   blue: 'bg-blue-50 text-blue-700 ring-blue-600/10',
