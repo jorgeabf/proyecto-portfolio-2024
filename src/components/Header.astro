@@ -7,25 +7,22 @@ const navigation = [
   },
   {
     label: 'experiencia',
-    href: '/experiencia'},
+    href: '/experiencia'
+  },
   {
     label: 'proyectos',
     href: '/proyectos'
-  },
-  {
-    label: 'contacto',
-    href: '/contacto'
   }
 ]
 ---
 
-<header class='py-4 flex flex-wrap justify-between items-center gap-6'>
+<header class='py-6 flex flex-wrap justify-between   items-start md:items-center gap-x-6 gap-y-4'>
   <div class='mr-auto flex items-center'>
     <LogoIcon />
-    <span class="ml-1 font-bold text-xl">JorgeAbf.</span>
+    <span class='ml-1 font-bold text-xl'>JorgeAbf.</span>
   </div>
 
-  <nav class='flex flex-wrap gap-8'>
+  <nav class='flex flex-col md:flex-row flex-wrap gap-x-8 gap-y-2'>
     {
       navigation.map((item) => (
         <a

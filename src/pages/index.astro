@@ -3,31 +3,30 @@ import Layout from '../layouts/Layout.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../const'
 import Skills from '@/components/Skills.astro'
 import PageTitle from '@/components/PageTitle.astro'
+import Section from '@/components/Section.astro'
 ---
 
 <Layout
   title={SITE_TITLE}
   description={SITE_DESCRIPTION}
 >
-  <header>
-    <PageTitle>
-      Hola, soy <span class='font-black text-blue-200'>Jorge Arce</span><span
-        slot='badge'>Disponible para trabajar</span
-      >
-    </PageTitle>
-    <p class='mb-4 text-xl'>
-      <strong class='text-blue-200 font-medium text-2xl'
-        >Desarrollador Web</strong
-      > con más de 3 años de experiencia, mis puntos fuertes son la <strong
+  <PageTitle>
+    Hola, soy<span class='font-black text-blue-200'>Jorge Arce</span><span
+      slot='badge'>Disponible para trabajar</span
+    >
+  </PageTitle>
+  <Section>
+    <p class='mb-8 text-lg md:text-xl'>
+      <strong class='text-blue-200 font-medium'>Desarrollador Web</strong> con más de 3 años de experiencia, mis puntos fuertes son la <strong
         class='text-blue-200 font-medium'>Maquetación</strong
       > y el <strong class='text-blue-200 font-medium'>Diseño Adaptable</strong
       >, garantizando una óptima visualización en todo tipo de dispositivos.
     </p>
-    <p class='mb-4 text-xl'>
+    <p class='mb-6 text-lg md:text-xl'>
       Estas son algunas de mis <strong class='text-blue-200 font-medium'
         >Habilidades</strong
       >:
     </p>
     <Skills />
-  </header>
+  </Section>
 </Layout>

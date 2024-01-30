@@ -3,7 +3,7 @@ const EXPERIENCE = [
   {
     title: 'Senior Frontend Developer',
     company: 'Flowbite',
-    location: 'Remote',
+    location: 'Remoto',
     startDate: '2020-01-01',
     endDate: null,
     description:
@@ -13,19 +13,9 @@ const EXPERIENCE = [
   {
     title: 'Frontend Developer',
     company: 'Flowbite',
-    location: 'Remote',
+    location: 'Remoto',
     startDate: '2019-01-01',
     endDate: '2020-01-01',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.',
-    tags: ['React', 'Tailwind CSS', 'Figma', 'JavaScript', 'HTML', 'CSS']
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'Flowbite',
-    location: 'Remote',
-    startDate: '2018-01-01',
-    endDate: '2019-01-01',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.',
     tags: ['React', 'Tailwind CSS', 'Figma', 'JavaScript', 'HTML', 'CSS']
@@ -33,10 +23,10 @@ const EXPERIENCE = [
 ]
 ---
 
-<ol class='relative mt-12 mb-16 border-s border-gray-700'>
+<ul class='relative border-s border-gray-700'>
   {
     EXPERIENCE.map((experience) => (
-      <li class='mb-10 ms-6'>
+      <li class='mb-16 ms-6 last:mb-0'>
         <span class='absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-gray-900 bg-blue-900'>
           <svg
             class='w-2.5 h-2.5 text-blue-300'
@@ -52,12 +42,12 @@ const EXPERIENCE = [
           {experience.title} at {experience.company}
           {!experience.endDate && (
             <span class='text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ms-3'>
-              Latest
+              Última
             </span>
           )}
         </h3>
-        <time class='block mb-2 text-sm font-normal leading-none text-gray-500'>
-          {experience.startDate} - {experience.endDate || 'Present'}
+        <time class='block mb-2 text-sm font-normal leading-none text-blue-300'>
+          {experience.startDate} - {experience.endDate || 'Actualidad'}
         </time>
         <p class='mb-4 text-base font-normal text-gray-400'>
           {experience.description}
@@ -65,4 +55,4 @@ const EXPERIENCE = [
       </li>
     ))
   }
-</ol>
+</ul>
