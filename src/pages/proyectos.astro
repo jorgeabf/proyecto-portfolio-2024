@@ -1,11 +1,15 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { SITE_TITLE } from '../const'
+import PageTitle from '@/components/PageTitle.astro'
 ---
 
 <Layout
   title={`Proyectos | ${SITE_TITLE}`}
   description='Mis proyectos y trabajos personales'
 >
-  <h1>Proyectos</h1>
+  <PageTitle>
+    Mis Sitios Web
+    <span slot='badge'>Puedes Visitarlos</span>
+  </PageTitle>
 </Layout>
