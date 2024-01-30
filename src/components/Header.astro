@@ -1,11 +1,13 @@
-<header class="py-4 flex flex-wrap justify-between items-center gap-6">
-  <img
-    src='/favicon.svg'
-    alt='Logotipo de Jorge Arce'
-    width="32"
-    height="32"
-  />
-  <nav class="flex flex-wrap gap-8 capitalize opacity-80">
+---
+import LogoIcon from '@/icons/LogoIcon.astro'
+---
+
+<header class='py-4 flex flex-wrap justify-between items-center gap-6'>
+  <div class="mr-auto flex">
+    <LogoIcon/>
+  </div>
+  
+  <nav class='flex flex-wrap gap-8 capitalize opacity-80'>
     <a href='/home'>home</a>
     <a href='/about'>about</a>
     <a href='/proyectos'>proyectos</a>
