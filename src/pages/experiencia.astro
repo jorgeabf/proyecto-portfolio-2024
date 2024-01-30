@@ -1,0 +1,17 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { SITE_TITLE } from '../const'
+import PageTitle from '@/components/PageTitle.astro'
+import Timeline from '@/components/Timeline.astro'
+---
+
+<Layout
+  title={`Proyectos | ${SITE_TITLE}`}
+  description='Mis proyectos y trabajos personales'
+>
+  <PageTitle>
+    Experiencia Laboral
+    <span slot='badge'>En desarrollo</span>
+  </PageTitle>
+  <Timeline />
+</Layout>
