@@ -3,6 +3,7 @@
 import '@fontsource-variable/urbanist'
 import Wrapper from '../components/Wrapper.astro'
 import Header from '../components/Header.astro'
+import Social from '@/components/Social.astro'
 import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
@@ -10,7 +11,7 @@ interface Props {
   description: string
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const { title, description } = Astro.props
 ---
@@ -53,17 +54,16 @@ const { title, description } = Astro.props
       <main class='max-w-2xl mx-auto'>
         <slot />
       </main>
+      <Social />
     </Wrapper>
-  </body>
+  </body><style is:global>
+    :root {
+      color-scheme: light dark;
+    }
+    html {
+      font-family: 'Urbanist Variable', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  </style>
 </html>
-
-<style is:global>
-  :root {
-    color-scheme: light dark;
-  }
-  html {
-    font-family: 'Urbanist Variable', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-</style>
