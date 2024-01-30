@@ -3,27 +3,27 @@ import Badge from '../components/Badge.astro'
 import Layout from '../layouts/Layout.astro'
 
 const skills = [
-  { color: 'red', skill: 'HTML' },
-  { color: 'blue', skill: 'CSS' },
-  { color: 'green', skill: 'JavaScript' },
-  { color: 'yellow', skill: 'React' },
-  { color: 'pink', skill: 'Vue' },
-  { color: 'purple', skill: 'Node' },
-  { color: 'indigo', skill: 'MongoDB' },
-  { color: 'gray', skill: 'Git' }
+  { color: 'orange', skill: 'HTML5' },
+  { color: 'blue', skill: 'CSS3' },
+  { color: 'yellow', skill: 'JavaScript' },
+  { color: 'green', skill: 'Node.js' },
+  { color: 'blue', skill: 'React' },
+  { color: 'gray', skill: 'Next.js' },        
+  { color: 'blue', skill: 'Tailwind' },
+  { color: 'gray', skill: 'Git & GitHub' }
 ]
 ---
 
 <Layout title='Welcome to Astro.'>
   <header class='mt-16'>
-    <h1 class='mb-6 flex items-center gap-4 text-4xl font-bold'>
-      Hola, soy Jorgeabf <Badge color='green' class='rounded'>Dispuesto a trabajar</Badge>
+    <h1 class='mb-6 flex flex-wrap items-center gap-4 text-4xl font-bold'>
+      Hola, soy Jorgeabf <span class='px-2 py-1 border border-green-500 border-dashed rounded-full text-green-400 text-xs font-medium'>Dispuesto a trabajar</span>
     </h1>
     <p class='mb-8 text-xl'>
       Desarrollador Web con más de 3 años de experiencia, mis puntos fuertes son
-      la Maquetación y el Diseño Adaptable a todos tipo de dispositivos.
+      la Maquetación y el Diseño Adaptable en todos tipo de dispositivos.
     </p>
-    <aside class='flex justify-between flex-wrap'>
+    <aside class='flex flex-wrap justify-center gap-4'>
       {skills.map((skill) => <Badge color={skill.color}>{skill.skill}</Badge>)}
     </aside>
   </header>
