@@ -1,0 +1,18 @@
+---
+import Badge from '../components/Badge.astro'
+
+const skills = [
+  { color: 'orange', skill: 'HTML5' },
+  { color: 'blue', skill: 'CSS3' },
+  { color: 'yellow', skill: 'JavaScript' },
+  { color: 'green', skill: 'Node.js' },
+  { color: 'blue', skill: 'React' },
+  { color: 'gray', skill: 'Next.js' },
+  { color: 'blue', skill: 'Tailwind' },
+  { color: 'gray', skill: 'Git & GitHub' }
+]
+---
+
+<aside class='flex flex-wrap justify-center gap-4'>
+  {skills.map((skill) => <Badge color={skill.color}>{skill.skill}</Badge>)}
+</aside>

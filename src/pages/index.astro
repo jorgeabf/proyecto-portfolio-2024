@@ -1,18 +1,8 @@
 ---
-import Badge from '../components/Badge.astro'
 import Layout from '../layouts/Layout.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../const'
-
-const skills = [
-  { color: 'orange', skill: 'HTML5' },
-  { color: 'blue', skill: 'CSS3' },
-  { color: 'yellow', skill: 'JavaScript' },
-  { color: 'green', skill: 'Node.js' },
-  { color: 'blue', skill: 'React' },
-  { color: 'gray', skill: 'Next.js' },
-  { color: 'blue', skill: 'Tailwind' },
-  { color: 'gray', skill: 'Git & GitHub' }
-]
+import Skills from '@/components/Skills.astro'
+import Social from '@/components/Social.astro'
 ---
 
 <Layout
@@ -22,7 +12,7 @@ const skills = [
   <header class='mt-16'>
     <h1 class='mb-6 flex flex-wrap items-center gap-4 text-4xl font-bold'>
       Hola, soy Jorgeabf <span
-        class='px-2 py-1 border border-green-500 border-dashed rounded-full text-green-400 text-xs font-medium'
+        class='px-2 py-1 border-2 border-green-500 border-dashed rounded-full text-green-400 text-xs font-medium'
         >Dispuesto a trabajar</span
       >
     </h1>
@@ -31,10 +21,11 @@ const skills = [
       de 3 años de experiencia, mis puntos fuertes son la <strong
         class='text-blue-200 font-medium'>Maquetación</strong
       > y el <strong class='text-blue-200 font-medium'>Diseño Adaptable</strong>
-      en todos tipo de dispositivos. Estas son algunas de mis <strong  class='text-blue-200 font-medium'>Habilidades</strong>:
+      en todos tipo de dispositivos. Estas son algunas de mis <strong
+        class='text-blue-200 font-medium'>Habilidades</strong
+      >:
     </p>
-    <aside class='flex flex-wrap justify-center gap-4'>
-      {skills.map((skill) => <Badge color={skill.color}>{skill.skill}</Badge>)}
-    </aside>
+    <Skills />
+    <Social />
   </header>
 </Layout>
