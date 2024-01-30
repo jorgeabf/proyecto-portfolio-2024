@@ -1,16 +1,36 @@
 ---
 import LogoIcon from '@/icons/LogoIcon.astro'
+const navigation = [
+  {
+    label: 'sobre mi',
+    href: '/'
+  },
+  {
+    label: 'proyectos',
+    href: '/proyectos'
+  },
+  {
+    label: 'contacto',
+    href: '/contacto'
+  }
+]
 ---
 
 <header class='py-4 flex flex-wrap justify-between items-center gap-6'>
-  <div class="mr-auto flex">
-    <LogoIcon/>
+  <div class='mr-auto flex'>
+    <LogoIcon />
   </div>
-  
-  <nav class='flex flex-wrap gap-8 capitalize opacity-80'>
-    <a href='/home'>home</a>
-    <a href='/about'>about</a>
-    <a href='/proyectos'>proyectos</a>
-    <a href='/contacto'>contacto</a>
+
+  <nav class='flex flex-wrap gap-8'>
+    {
+      navigation.map((item) => (
+        <a
+          class='font-medium capitalize opacity-80 hover:opacity-100 transition-opacity duration-200'
+          href={item.href}
+        >
+          {item.label}
+        </a>
+      ))
+    }
   </nav>
 </header>
