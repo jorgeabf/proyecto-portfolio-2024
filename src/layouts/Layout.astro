@@ -39,10 +39,17 @@ const { title, description } = Astro.props
     />
     <title>{title}</title>
     <meta
+      name='theme-color'
+      content='#4f4f4f2e'
+    />
+    <meta
       name='description'
       content={description}
     />
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link
+      rel='sitemap'
+      href='/sitemap-index.xml'
+    />
     <ViewTransitions />
   </head>
   <body class='relative h-full w-full bg-slate-950'>
@@ -57,19 +64,20 @@ const { title, description } = Astro.props
       </main>
       <Social />
     </Wrapper>
-  </body><style is:global>
-    :root {
-      color-scheme: light dark;
-      --primary: hsl(210, 85%,33%);
-      --primary-dark: hsl(210, 85%, 15%);
-      --primary-light: hsl(210, 85%, 85%);
-      --primary-link: hsl(210, 100%, 65%);
-      --secondary: hsl(10, 70%, 50%);
-    }
-    html {
-      font-family: 'Urbanist Variable', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
-    }
-  </style>
+    <style is:global>
+      :root {
+        color-scheme: light dark;
+        --primary: hsl(210, 85%, 33%);
+        --primary-dark: hsl(210, 85%, 15%);
+        --primary-light: hsl(210, 85%, 85%);
+        --primary-link: hsl(210, 100%, 65%);
+        --secondary: hsl(10, 70%, 50%);
+      }
+      html {
+        font-family: 'Urbanist Variable', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+    </style>
+  </body>
 </html>
