@@ -11,13 +11,14 @@ import Section from '@/components/Section.astro'
   description={SITE_DESCRIPTION}
 >
   <PageTitle>
-    Hola, soy<span class='font-black text-blue-200'>Jorge Arce</span><span
+    Hola, soy<strong class='font-black text-blue-200'>Jorge Arce</strong><span
       slot='badge'>Disponible para trabajar</span
     >
   </PageTitle>
   <Section>
     <p class='mb-8 text-lg md:text-xl'>
-      <strong class='text-blue-200 font-medium'>Desarrollador Web</strong> con más de 3 años de experiencia, mis puntos fuertes son la <strong
+      <strong class='text-blue-200 font-medium'>Desarrollador Web</strong> con más
+      de 3 años de experiencia, mis puntos fuertes son la <strong
         class='text-blue-200 font-medium'>Maquetación</strong
       > y el <strong class='text-blue-200 font-medium'>Diseño Adaptable</strong
       >, garantizando una óptima visualización en todo tipo de dispositivos.
@@ -30,3 +31,10 @@ import Section from '@/components/Section.astro'
     <Skills />
   </Section>
 </Layout>
+
+<style>
+  strong {
+    font-weight: 600;
+    color: var(--primary-light);
+  }
+</style>

@@ -29,7 +29,7 @@ const EXPERIENCE = [
       <li class='mb-16 ms-6 last:mb-0'>
         <span class='absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-gray-900 bg-blue-900'>
           <svg
-            class='w-2.5 h-2.5 text-blue-300'
+            class='w-2.5 h-2.5'
             aria-hidden='true'
             xmlns='http://www.w3.org/2000/svg'
             fill='currentColor'
@@ -41,12 +41,12 @@ const EXPERIENCE = [
         <h3 class='flex items-center mb-1 text-lg font-semibold text-white'>
           {experience.title} at {experience.company}
           {!experience.endDate && (
-            <span class='text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-blue-900 text-blue-300 ms-3'>
+            <span class='text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3'>
               Última
             </span>
           )}
         </h3>
-        <time class='block mb-2 text-sm font-normal leading-none text-blue-300'>
+        <time class='block mb-2 text-sm font-normal leading-none'>
           {experience.startDate} - {experience.endDate || 'Actualidad'}
         </time>
         <p class='mb-4 text-base font-normal text-gray-400'>
@@ -56,3 +56,13 @@ const EXPERIENCE = [
     ))
   }
 </ul>
+
+<style>
+  span {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+  time {
+    color: var(--primary-light);
+  }
+</style>
