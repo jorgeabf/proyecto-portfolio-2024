@@ -1,14 +1,7 @@
-<h1 class='mt-8 md:mt-16 flex flex-wrap items-center gap-4 text-3xl font-bold'>
+<h1
+  class='mt-8 md:mt-16 flex flex-wrap items-center gap-4 text-3xl md:text-5xl font-medium text-gray-200'
+  {...Astro.props}
+>
+  <slot name='icon' />
   <slot />
-  <span
-    class='px-2 py-1 rounded-full text-xs font-bold uppercase'
-    ><slot name='badge' /></span
-  >
 </h1>
-
-<style>
-  span {
-    color:var(--secondary);
-    border: 2px dashed var(--secondary);
-  }
-</style>
