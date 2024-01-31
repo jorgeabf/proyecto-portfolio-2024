@@ -6,8 +6,11 @@ import Section from '@/components/Section.astro'
 import Badge from '@/components/Badge.astro'
 import { Image } from 'astro:assets'
 
-import eguidazuImg from '../assets/eguidazuImg.png'
-import autoescuelaImg from '../assets/autoescuelaImg.png'
+import eguidazuImg from '../assets/eguidazuImg.webp'
+import autoescuelaImg from '../assets/autoescuelaImg.webp'
+import mmeImg from '../assets/mmeImg.webp'
+import mmeAppImg from '../assets/mmeAppImg.webp'
+import gespaImg from '../assets/gespaImg.webp'
 
 const PROJECTS = [
   {
@@ -38,6 +41,51 @@ const PROJECTS = [
       { label: 'HTML', color: 'orange' },
       { label: 'CSS', color: 'blue' }
     ]
+  },
+
+  {
+    title: 'Máster en Medicina de Emergencia',
+    description:
+      'Sitio Web con todas las novedades del club de ajedrez Eguidazu, con un diseño moderno y atractivo.',
+    link: 'https://www.masteremergencias.com/',
+    github: '',
+    image: mmeImg,
+    tags: [
+      { label: 'Astro', color: 'pink' },
+      { label: 'Javascript', color: 'yellow' },
+      { label: 'HTML', color: 'orange' },
+      { label: 'CSS', color: 'blue' }
+    ]
+  },
+
+  {
+    title: 'App Máster en Medicina de Emergencia',
+    description:
+      'Sitio Web con todas las novedades del club de ajedrez Eguidazu, con un diseño moderno y atractivo.',
+    link: 'https://www.app.masteremergencias.com/',
+    github: '',
+    image: mmeAppImg,
+    tags: [
+      { label: 'Astro', color: 'pink' },
+      { label: 'Javascript', color: 'yellow' },
+      { label: 'HTML', color: 'orange' },
+      { label: 'CSS', color: 'blue' }
+    ]
+  },
+
+  {
+    title: 'Máster en Gestión de Pacientes',
+    description:
+      'Sitio Web con todas las novedades del club de ajedrez Eguidazu, con un diseño moderno y atractivo.',
+    link: 'https://www.mastergespa.com/',
+    github: '',
+    image: gespaImg,
+    tags: [
+      { label: 'Astro', color: 'pink' },
+      { label: 'Javascript', color: 'yellow' },
+      { label: 'HTML', color: 'orange' },
+      { label: 'CSS', color: 'blue' }
+    ]
   }
 ]
 ---
@@ -48,7 +96,6 @@ const PROJECTS = [
 >
   <PageTitle>
     Mis últimos proyectos
-    <span slot='badge'>Puedes Visitarlos</span>
   </PageTitle>
   <Section>
     {
@@ -59,7 +106,6 @@ const PROJECTS = [
               src={project.image}
               alt={project.title}
               class='w-full rounded-lg'
-              height={300}
             />
           </div>
           <div class='w-full md:w-1/2'>
@@ -100,5 +146,9 @@ const PROJECTS = [
 <style>
   a {
     color: var(--primary-link);
+  }
+
+  h2 {
+    color: var(--primary-light);
   }
 </style>
