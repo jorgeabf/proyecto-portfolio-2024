@@ -1,31 +1,13 @@
 ---
-const EXPERIENCE = [
-  {
-    title: 'Senior Frontend Developer',
-    company: 'Flowbite',
-    location: 'Remoto',
-    startDate: '2020-01-01',
-    endDate: null,
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.',
-    tags: ['React', 'Tailwind CSS', 'Figma', 'JavaScript', 'HTML', 'CSS']
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'Flowbite',
-    location: 'Remoto',
-    startDate: '2019-01-01',
-    endDate: '2020-01-01',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.',
-    tags: ['React', 'Tailwind CSS', 'Figma', 'JavaScript', 'HTML', 'CSS']
-  }
-]
+import CV from '@cv'
+const { work } = CV
+
+import FormattedDate from './FormattedDate.astro'
 ---
 
 <ul class='relative border-s border-gray-700'>
   {
-    EXPERIENCE.map((experience) => (
+    work.map((experience) => (
       <li class='mb-16 ms-6 last:mb-0'>
         <span class='absolute flex items-center justify-center w-6 h-6 rounded-full -start-3 ring-8 ring-gray-900 bg-blue-900'>
           <svg
@@ -39,18 +21,23 @@ const EXPERIENCE = [
           </svg>
         </span>
         <h3 class='flex items-center mb-1 text-lg font-semibold text-white'>
-          {experience.title} at {experience.company}
-          {!experience.endDate && (
-            <span class='text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3'>
-              Última
-            </span>
-          )}
+          {experience.name}
+          <span class='mx-1 text-gray-400'>como</span>
+          {experience.position}
+          <span class='badge text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3'>
+            {experience.remoto ? 'Remoto' : 'Presencial'}
+          </span>
         </h3>
-        <time class='block mb-2 text-sm font-normal leading-none'>
-          {experience.startDate} - {experience.endDate || 'Actualidad'}
-        </time>
+        <div class='block mb-2 text-sm font-normal leading-none'>
+          <FormattedDate date={experience.startDate} /> -{' '}
+          {experience.endDate ? (
+            <FormattedDate date={experience.endDate} />
+          ) : (
+            'Actual'
+          )}
+        </div>
         <p class='mb-4 text-base font-normal text-gray-400'>
-          {experience.description}
+          {experience.summary}
         </p>
       </li>
     ))
@@ -58,7 +45,7 @@ const EXPERIENCE = [
 </ul>
 
 <style>
-  span {
+  .badge {
     background-color: var(--primary-dark);
     color: var(--primary-light);
   }

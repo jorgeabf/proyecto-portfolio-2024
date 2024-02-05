@@ -1,0 +1,178 @@
+{
+  "basics": {
+    "name": "Jorge Arce",
+    "label": "Desarrollador Web & Gestor de Contenidos con más de 3 años de experiencia",
+    "image": "https://avatars.githubusercontent.com/u/84247756?v=4",
+    "email": "aportuvas@outlook.es",
+    "phone": null,
+    "url": "https://jorgearce.dev",
+    "summary": "Desarrollador Web con más de 3 años de experiencia, mis puntos fuertes son la Maquetación y el Diseño Adaptable, garantizando una óptima visualización en todo tipo de dispositivos.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "Vitoria",
+      "countryCode": "ES",
+      "region": "España"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "jorgeabf",
+        "url": "https://linkedin.com/in/jorge-arce-balluerca"
+      },
+      {
+        "network": "GitHub",
+        "username": "jorgeabf",
+        "url": "https://github.com/jorgeabf"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Talgo",
+      "position": "Mecánico de Estructuras",
+      "url": "https://company.com",
+      "startDate": "2022-12-19",
+      "endDate": null,
+      "summary": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa fugit consectetur libero magnam error blanditiis!",
+      "highlights": ["Mecánica", "Soldadura", "Montaje de Estructuras"],
+      "remoto": false
+    },
+    {
+      "name": "Michelín",
+      "position": "Confección de Neumáticos",
+      "url": "https://organization.com/",
+      "startDate": "1997-01-01",
+      "endDate": "2008-01-01",
+      "summary": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa fugit consectetur libero magnam error blanditiis!",
+      "highlights": ["Confección", "Neumáticos", "Montaje"],
+      "remoto": true
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University",
+      "url": "https://institution.com/",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Graphic Design",
+      "level": "Master",
+      "keywords": ["Photoshop"]
+    },
+    {
+      "name": "Project Management",
+      "level": "Master",
+      "keywords": ["Agile", "Scrum"]
+    },
+    {
+      "name": "Maquetación",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Diseño Adaptable",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Club Ajedrez Eguidazu",
+      "isActive": true,
+      "url": "https://www.ajedrezeguidazu.com/",
+      "description": "Página Web del Club de Ajedrez Eguidazu, con información del Club, Jugadores y Torneos.",
+      "highlights": ["Programación", "Mantenimiento", "Gestión de Contenidos"]
+    },
+
+    {
+      "name": "Autoescuela San Prudencio",
+      "isActive": true,
+      "url": "https://www.autoescuelasanprudencio.com/",
+      "description": "Página Web de la Autoescuela San Prudencio, con información de la Autoescuela, Cursos y Test.",
+      "highlights": ["Programación", "Mantenimiento", "Gestión de Contenidos"]
+    },
+
+    {
+      "name": "Máster en Medicina de Emergencia",
+      "isActive": true,
+      "url": "https://www.masteremergencias.com/",
+      "description": "Página Web del Máster en Medicina de Emergencia, con información del Máster, Profesores y Alumnos.",
+      "highlights": ["Programación", "Mantenimiento", "Gestión de Contenidos"]
+    },
+
+    {
+      "name": "Máster en Gestión de Pacientes",
+      "isActive": true,
+      "url": "https://www.mastergespa.com/",
+      "description": "Página Web del Máster en Gestión de Pacientes, con información del Máster, Profesores y Alumnos.",
+      "highlights": ["Programación", "Mantenimiento", "Gestión de Contenidos"]
+    }
+  ]
+}
